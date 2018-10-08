@@ -42,5 +42,3 @@ app.listen(3000, function(){
 //     console.log('연결 끊어짐.');
 //     console.log('시간 : ' + new Date().getTime());
 // });
-
-
