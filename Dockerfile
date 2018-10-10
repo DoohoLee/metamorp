@@ -8,8 +8,6 @@ COPY package*.json ./
 
 RUN npm install
 
-RUN npm install -g pm2 node-gyp
-
 COPY . .
 
 CMD node app.js
