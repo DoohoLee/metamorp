@@ -10,6 +10,6 @@ RUN npm install -g pm2 node-gyp
 
 COPY . ./app
 
-EXPOSE 3000
-
 CMD sudo pm2 start app.js
+
+EXPOSE 3000
