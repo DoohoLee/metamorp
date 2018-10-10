@@ -1,14 +1,16 @@
 FROM node:9-slim
 
-WORKDIR /app
+RUN mkdir -p /usr/src/app
 
-COPY package*.json ./app
+WORKDIR /usr/src/app
+
+COPY package*.json ./
 
 RUN npm install
 
 RUN npm install -g pm2 node-gyp
 
-COPY . ./app
+COPY . .
 
 CMD sudo node app.js &
 
