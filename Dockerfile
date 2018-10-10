@@ -1,15 +1,15 @@
-FROM node:6
+FROM node:9-slim
 
-RUN mkdir -p /usr/src/app
+WORKDIR /app
 
-WORKDIR /usr/src/app
+COPY package*.json ./app
 
-COPY package*.json ./
+RUN npm install
 
 RUN npm install -g pm2 node-gyp
 
-COPY . .
+COPY . ./app
 
 EXPOSE 3000
 
-CMD ["pm2-docker", "app.js"]
+CMD sudo pm2 start app.js
