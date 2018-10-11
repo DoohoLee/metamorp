@@ -13,7 +13,7 @@ app.engine('html', require('ejs').renderFile);
 app.use(express.static('public'));
 
 
-app.listen(80, function(){
+app.listen(3000, function(){
 	console.log('Connected 3000 port');
 });
 
