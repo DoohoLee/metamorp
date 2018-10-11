@@ -14,7 +14,7 @@ app.use(express.static('public'));
 
 
 app.listen(80, function(){
-	console.log('Connected 3000 port');
+	console.log('Connected 80 port');
 });
 
 // var net = require('net');
