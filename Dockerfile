@@ -6,10 +6,10 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm install pm2 -g
 
 COPY . .
 
-CMD node app.js
+CMD ["pm2-runtime", "app.js"]
 
 EXPOSE 80
